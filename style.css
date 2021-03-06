@@ -1,0 +1,112 @@
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft_Magenta: hsl(300, 69%, 71%);
+}
+body{
+    box-sizing: border-box;
+    background: url("./images/bg-desktop.svg"), var(--Violet);
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+/* Typography */
+.content{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+h1{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+p{
+    color: rgb(218, 214, 214);
+    font-size: 1.2rem;
+}
+button{
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: var(--Violet);
+    transition: background-color 1.2s;
+    box-shadow: 3px 10px 12px 0px rgba(0,0,0,0.37);
+}
+button:hover{
+    color: rgb(248, 246, 246);
+    background-color: var(--Soft_Magenta);
+}
+/* Layouts */
+header{
+    height: 15vh;
+    padding: 0rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 7rem;
+    gap: 4rem;
+}
+footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 10vh;
+}
+/* Social Media Icons */
+.icon{
+    border: 2px solid rgb(202, 201, 201);
+    border-radius: 50%;
+    padding: .5rem;
+    margin-right: 0.4rem;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    transition: color .7s, border-color .7s;
+}
+.icon:last-child{
+    margin-right: 10rem;
+}
+.icon:hover{
+    color: var(--Soft_Magenta);
+    border-color: var(--Soft_Magenta);
+}
+
+/* Mobile Style */
+@media (max-width: 1100px){
+    header{
+        height: 100%;
+        padding: 1rem 1.5rem;
+    }
+    .container{
+        flex-direction: column;
+        /* align-items: center; */
+        padding: 0rem 1.5rem;
+        gap: 0;
+        height: 100%;
+    }
+    .content{
+        height: 100%;
+        text-align: center;
+    }
+    footer{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .icon:last-child{
+        margin-right: 0rem;
+    }
+    .container img{
+        width: 100%;
+    }
+}
